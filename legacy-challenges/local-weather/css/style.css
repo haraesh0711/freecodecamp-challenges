@@ -1,0 +1,48 @@
+a:link {
+  color: #d4d7db;
+  text-decoration: none;
+}
+a:visited {
+  color: #d4d7db;
+  text-decoration: none;
+}
+a:active {
+  color: #afb1b5;
+  text-decoration: none;
+}
+a:hover {
+  color: #afb1b5;
+  text-decoration: none;
+}
+body {
+  text-align: center; 
+  font-family: "Questrial";
+  background-color: #2c7ac9;
+  color: #d4d7db;
+}
+
+.toggler-button {
+  border: none !important;
+  background-color: #2c7ac9 !important;
+  color: #d4d7db !important;
+  font-size: 20px !important;
+  padding-top: -10px !important;
+}
+
+.weather-panel {
+  margin: 40px 40px 40px 40px;
+  padding: 20px 20px 20px 20px;
+}
+
+.fore-prop {
+  font-size: 22px;
+}
+
+.panel-prop {
+  font-size: 20px;
+}
+.forecaster {
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: -15px;
+}

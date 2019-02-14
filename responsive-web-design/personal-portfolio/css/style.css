@@ -1,0 +1,92 @@
+a:link {
+  color: #c6c4c4;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #c6c4c4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b8bbbc;
+  text-decoration: none;
+}
+
+a:active {
+  color: #c6c4c4;
+  text-decoration: none;
+}
+
+.center {
+  display: block;
+  margin: auto;
+  margin-top: 75px;
+}
+
+body {
+  background: #c6c4c4;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.whitefont {
+  font-family: "Montserrat" !important;
+  color: #426084;
+}
+
+.whitefont1 {
+  color: #b2b0b0 !important;
+}
+
+.whitefont2 {
+  color: #e8e9ea !important;
+  font-family: "Montserrat" !important;
+  font-size: 24px;
+  margin: 15px 15px 15px 15px;
+}
+
+.whitefont3 {
+  color: #c6c4c4 !important;
+  font-family: "Montserrat" !important;
+  font-size: 24px;
+  margin: 15px 15px 15px 15px;
+}
+.whitefont4 {
+  color: #4b4c4c !important;
+  font-family: "Montserrat" !important;
+}
+
+.navi {
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+.prop {
+  font-size: 18px;
+}
+
+.aboutground {
+  text-align: center;
+  background-color: #426084 !important;
+  margin: 10px 10px 10px 10px !important;
+  padding: 10px 10px 10px 10px !important;
+}
+.list-prop {
+  list-style: none;
+  margin-top: 10px;
+  margin-right: 50px;
+  font-size: 22px;
+}
+
+.darkcolor {
+  background-color: #426084;
+  border-color: #426084;
+}
+.bot-space {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form (freeCodeCamp challenge)</title>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id = "main">
+<center><h1 id = "title">Please do tell us how we can improve our services more!</h1></center>
+<div class = "form-layout" id = "survey-form">
+  <center><h3><p id = "description">Won't you please tell us?</p></h3></center><br>
+  <form action = "/action_page.php" method = "post" id = "survey-form">
+  <div class = "survey-layout">
+    <label id = "name-label">Name:<b><font color = "red">*</font></b></label><input type = "text" id = "name" class = "form-control" placeholder = "Please enter your name here." required><br><br>
+    <label id = "number-label">Age:<b><font color = "red">*</font></b></label><input type = "number" id = "number" min = "1" max = "150" class = "form-control" placeholder = "Please enter your age here. If you want to." required><br><br>
+    <label id = "email-label">Email:<b><font color = "red">*</font></b></label><input type = "email" class = "form-control" id = "email" placeholder = "Please enter your email ID here." required><br><br>
+    What are you currently doing?<select class = "form-control" id = "dropdown">
+    <option>I don't want to say/I refuse to say.</option>
+    <option>I'm currently studying.</option>
+    <option>I'm currently working full-time.</option>
+    <option>I'm currently working part-time.</option>
+    <option>I'm currently neither studying nor working.</option>
+    <option>I'm currently doing something else.</option>
+    <option>I have absolutely no idea.</option>
+    </select><br><br>
+    Would you recommend our services to someone else?<b><font color = "red">*</font></b><br><br>
+    <div style = "font-weight: normal;" id = "opinion">
+    <input type = "radio" name = "name" class = "radio-inline"> For sure!
+    <input type = "radio" name = "name" class = "radio-inline"> Probably.
+    <input type = "radio" name = "name" class = "radio-inline"> Maybe.
+    <input type = "radio" name = "name" class = "radio-inline"> Maybe not.
+    <input type = "radio" name = "name" class = "radio-inline"> Nope.
+    <input type = "radio" name = "name" class = "radio-inline"> Are you kidding me?
+    </div><br><br>
+    What should we improve? (Check all that apply.)<b><font color = "red">*</font></b><br><br>
+    <div style = "font-weight: normal;">
+    <input type = "checkbox" value = "1">Better website display.<br>
+    <input type = "checkbox" value = "2">More freebies.<br>
+    <input type = "checkbox" value = "3">Better customer care/tech support.<br>
+    <input type = "checkbox" value = "4">More features in existing service(s).<br>
+    <input type = "checkbox" value = "5">Less ads in website.<br>
+    <input type = "checkbox" value = "6">Better experience in online forums.<br>
+    <input type = "checkbox" value = "7">Other<br>
+    </div><br><br>
+    Do you have anything else to tell us? (Don't be shy! We won't judge.)<br><br>
+    <textarea class = "form-control" rows = "5"></textarea><br><br><br>
+    <center><button class = "btn btn-primary btn-lg" id = "submit">Submit!</button><br><br><br>
+    Thank you so much for your feedback! Here, have a cookie.&nbsp;&nbsp;<i class="fas fa-cookie fa-1x"></i></center>
+  </div>
+  </form>
+  </div>
+  <center class = "footer">Designed and coded by <a href="https://www.freecodecamp.com/haraesh0711" target="_blank">me</a>!</center>
+</div>
+  
+  
+
+</body>
+
+</html>

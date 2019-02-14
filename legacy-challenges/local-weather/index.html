@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Show Local Weather (freeCodeCamp)</title>
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <body onload="getLocation()">
+  <div class="container">
+    <h1><b>Local Weather</b></h1>
+    <h2><b>for</b></h2>
+    <h3><div id = "place-name"></div></h3>
+    <div class="row weather-panel">
+      <div class="col-md-3 fore-prop"><b>Temperature</b><br><br><span id="weather-temp" class="panel-prop"></span><br>
+        <button id="toggler" class="btn btn-default toggler-button">°F</button></div>
+      <div class="col-md-3 fore-prop"><b>Wind Speed</b><br><br><span id="weather-wind" class="panel-prop"></span></div>
+      <div class="col-md-3 fore-prop"><b>
+      Forecast</b><br>
+        <span><img id = "weather-icon" class = "forecaster" /></span><br>
+        <span id="weather-main" class="panel-prop"></span>
+      </div>
+      <div class="col-md-3 fore-prop"><b>Humidity</b><br><br>
+        <span id="weather-humidity" class="panel-prop"></span>
+      </div>
+    </div>
+    Uses <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a> API and <a href="https://cors-anywhere.herokuapp.com" target="_blank">cors-anywhere</a>. Designed and coded by <a href="https://www.freecodecamp.com/haraesh0711" target="_blank">me</a>!
+  </div>
+</body>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+.nav-link {
+  font-size: 18px;
+}
+.flex-container {
+  display: flex;
+}
+.cookie-header {
+  align: center;
+}
+.navbar {
+  height: 75px;
+  background-color: #ededed;
+  border-color: #ededed;
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cookie-logo {
+  float: left;
+  margin-top: -20px;
+}
+.cookie-name {
+  font-size: 30px;
+  padding-right: 20px;
+  color: black;
+}
+.cookie1 {
+  padding-bottom: 20px;
+  color: black;
+}
+.cookie-desc {
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.sub-btn {
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  background-color: #808080;
+}
+.email-field {
+  width: 400px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+}
+body {
+  font-family: "Antic Slab";
+  background-color: #ededed;
+  padding-top: 75px;
+}
+.maker {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.maker h3 {
+  padding-bottom: 10px;
+}
+.head1 a{
+  color: black;
+}
+.head1 a:hover {
+  text-decoration: none;
+}
+.footer {
+  background-color: #303030;
+  color: white;
+  font-size: 12px;
+}
+.footer a:link {
+  color: white !important;
+  text-decoration: none;
+}
+.footer a:visited {
+  color: white !important;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #b1b1b1 !important;
+  text-decoration: none;
+}
+.footer a:active {
+  color: white !important;
+  text-decoration: none;
+}
+li a:link {
+  color: black !important;
+}
+li a:hover {
+  color: silver !important;
+}
+li a:active {
+  color: black !important;
+}
+li a:visited {
+  color: black !important;
+}
+@media (max-width: 900px) {
+  body {
+    padding-top: 125px;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    padding-top: 200px;
+  }
+}

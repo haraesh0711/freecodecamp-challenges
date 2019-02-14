@@ -1,0 +1,64 @@
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+body {
+  background-color: #4b367c !important;
+  font-family: "Josefin Sans" !important;
+}
+.headprop {
+  color: #d4d7db;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.switcherprop {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background-color: #d4d7db;
+}
+
+.footprop {
+  margin-top: 25px;
+  text-align: center;
+  color: #d4d7db;
+  font-size: 18px;
+}
+.switchcmd {
+  border: none;
+  
+  margin-left: 125px;
+  margin-top: 20px;
+  padding: 10px 10px 10px 10px;
+  background-color: #d4d7db;
+  text-color: #4b367c;
+  font-size: 22px;
+}
+.streamprop {
+  margin: 50px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  text-color: #4b367c;
+  font-size: 18px;
+}
+.proprop {
+  margin-top: 15px;
+  margin-right: 200px;
+}
+.imgprop {
+  margin-left: 250px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.paddown {
+  padding-bottom: 40px;
+}

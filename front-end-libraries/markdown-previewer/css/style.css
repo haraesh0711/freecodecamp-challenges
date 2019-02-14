@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  background-color: #f88379;
+  color: #ffffff;
+  justify-content: center;
+  margin-top: 25px;
+  font-family: "Calibri Light";
+}
+
+textarea {
+  border: none;
+  resize: none;
+  color: #f88379;
+  padding: 50px;
+}
+
+.preview {
+  background-color: #ffffff;
+  color: #f88379;
+  padding: 50px;
+}
+
+a:link {
+  text-decoration: none;
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page (freeCodeCamp)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <main id="main-doc">
+  <nav id="navbar">
+    <header>Python 3.0 Basics</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+    <a class="nav-link" href="#Overview_and_features">Overview and features</a>
+    <a class="nav-link" href="#Basic_Syntax">Basic Syntax</a>
+    <a class="nav-link" href="#Variables">Variables</a>
+    <a class="nav-link" href="#Data_Types">Data Types</a>
+    <a class="nav-link" href="#Basic_Operators">Basic Operators</a>
+    <a class="nav-link" href="#Decision_Making">Decision Making</a>
+    <a class="nav-link" href="#Loops">Loops</a>
+    <a class = "nav-link" href = "#Loop_Control_Statements">Loop Control Statements</a>
+    <a class="nav-link" href="#Reference">Reference</a>
+  </nav>
+  <section class="main-section" id="Introduction">
+    <header>
+      <h2>Introduction</h2>
+    </header>
+    <p>
+      Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. The Python source code is available under the GNU General Public License (GPL). Python is
+      named after a TV Show called ‘Monty Python’s Flying Circus’ and not after the snake.</p>
+    <p>Python 3.0 was released in 2008. Although this version is supposed to be backward incompatible, many of its important features have been backported to be compatible with version 2.7 later on.</p>
+  </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <header>
+      <h2>What you should already know</h2>
+    </header>
+    <p>This guide assumes you have the following knowledge as prerequisites:</p>
+    <ul type="disk">
+      <li>A basic understanding of computer programming terminologies</li>
+      <li>A basic understanding of any of the programming or scripting languages</li>
+      <li>Patience, curiosity and perserverance to learn Python</li>
+    </ul>
+  </section>
+  <section class="main-section" id="Overview_and_features">
+    <header>
+      <h2>Overview and features</h2>
+    </header>
+    <p>Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.</p>
+    <p>Some of the many features of Python are: </p>
+    <ul type="disk">
+      <li>Python is processed at runtime by the interpreter. You do not need to compile your program before executing it.
+      </li>
+      <li>Python supports object-oriented style or technique of programming that encapsulates code within objects.</li>
+      <li>It is a great language for beginner-level programmers and supports the development of a wide range of applications.</li>
+      <li>Python code is more clearly defined and fairly easy to maintain. It also has few keywords, simple structure, and a clearly defined syntax.</li>
+      <li>Python's bulk of the library is very portable and cross-platform compatible on UNIX, Windows, and Macintosh.</li>
+      <li>Python can run on a wide variety of hardware platforms and has the same interface on all platforms.</li>
+    </ul>
+  </section>
+  <section class="main-section" id="Basic_Syntax">
+    <header>
+      <h2>Basic Syntax</h2>
+    </header>
+    <p>Type the following text at the Python prompt and press Enter:</p>
+    <code>print ("Hello, Python!")</code>
+    <p>This produces the following result</p>
+    <samp>Hello, Python!</samp>
+    <p><b>NOTE:</b> If you are running the older version of Python (Python 2.x), use of parentheses is optional.</p>
+    <h3>Script programming</h3>
+    <p>It is also possible to run your Python program as a script. This is accomplished using the .py file. Invoking the interpreter with a script parameter begins execution of the script and continues until the script is finished. When the script is finished,
+      the interpreter is no longer active.</p>
+    <ul type="disk">
+      <li>On Linux, the file is executed as <code>$ python test.py</code></li>
+      <li>On Windows, the file is executed as <code>C:\Python34>Python test.py</code></li>
+    </ul>
+    <p><b>NOTE: </b>For running Python scripts, you must have the Python interpreter set in the PATH environment variable.</p>
+  </section>
+  <section class="main-section" id="Variables">
+    <header>
+      <h2>Variables</h2>
+    </header>
+    <p>
+      Python variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable. The assignment operator is used to assign values to variables. The operand to the left of the operator
+      is the name of the variable and the operand to the right is the value stored in the variable. For example
+    </p>
+    <code>
+      counter = 100          # An integer assignment
+      miles   = 1000.0       # A floating point
+      name    = "John"       # A string
+      print (counter)
+      print (miles)
+      print (name)
+    </code>
+    <p>Produces the following result</p>
+    <samp>
+    100
+    1000.0
+    John
+    </samp>
+    <h3>Multiple assignment</h3>
+    <p>Python allows you to assign a single value to several variables simultaneously. For example</p>
+    <code>a = b = c = 1</code>
+    <p>Assigns a value 1 to a, b, c. Also</p>
+    <code>a, b, c = 1, 2, "john"</code>
+    <p>The value 1 is assigned to a, the value 2 is assigned to b, and the value "john" is assigned to c.</p>
+  </section>
+  <section class = "main-section" id = "Data_Types">
+    <header><h2>Data Types</h2></header>
+    <p>The data stored in memory can be of many types. Python has five standard data types: </p>
+    <ul type="disk">
+      <li>Numbers, such as 1, 453, 323.212</li>
+      <li>Strings, such as "Stockholm" and "Vienna, Austria"</li>
+      <li>Lists, such as ["Orange", "Apple", 212, 534.212]</li>
+      <li>Tuples, such as ('physics', 'chemistry', 1997, 2000)</li>
+      <li>Dictionaries, such as {'Name': 'Zara', 'Age': 7, 'Class': 'First'}</li>
+    </ul>
+  </section>
+  <section class="main-section" id="Basic_Operators">
+    <header>
+      <h2>Basic Operators</h2>
+      <p>Operators are constructs which can manipulate the value of operands. Python language supports the following types of operators:</p>
+      <ul type="disk">
+        <li>Arithmetic Operators (+, -, *, /, %, **, //)</li>
+        <li>Comparison (Relational) Operators (==, !=,
+          <, <=,>, >=)</li>
+        <li>Assignment Operators(=, +=, -=, *=, /=, **=, %=, //=)</li>
+        <li>Logical Operators (and, or, not)</li>
+        <li>Bitwise Operators (&, |, ^, ~, >>,
+          <<)</li>
+            <li>Membership Operators(in, not in)</li>
+            <li>Identity Operators(is, is not)</li>
+      </ul>
+    </header>
+  </section>
+  <section class="main-section" id="Decision_Making">
+    <header>
+      <h2>Decision Making</h2>
+    </header>
+    <p>Decision-making is the anticipation of conditions occurring during the execution of a program and specified actions taken according to the conditions. Decision structures evaluate multiple expressions, which produce TRUE or FALSE as the outcome. You
+      need to determine which action to take and which statements to execute if the outcome is TRUE or FALSE otherwise.</p>
+    <p>Python assumes any non-zero and non-null values as TRUE, and any zero or null values as FALSE value.</p>
+    <p>Python provides the following types of decision-making statements:</p>
+    <h3>if statement</h3>
+    <p>The if statement contains a logical expression using which the data is compared and a decision is made based on the result of the comparison. For example</p>
+    <code>var1 = 100
+if var1:
+   print ("1 - Got a true expression value")
+   print (var1)
+
+var2 = 0
+if var2:
+   print ("2 - Got a true expression value")
+   print (var2)
+print ("Good bye!")</code>
+    <p>Returns the output</p>
+    <samp>1 - Got a true expression value
+100
+Good bye!</samp>
+    <h3>if...else statement</h3>
+    <p>An else statement can be combined with an if statement. An else statement contains a block of code that executes if the conditional expression in the if statement resolves to 0 or a FALSE value. The else statement is an optional statement and there
+      could be at the most only one else statement following if. For example</p>
+    <code>amount = int(input("Enter amount: "))
+
+if amount<1000:
+   discount = amount*0.05
+   print ("Discount",discount)
+else:
+   discount = amount*0.10
+   print ("Discount",discount)
+    
+print ("Net payable:",amount-discount)</code>
+    <p>Returns the output</p>
+    <samp>Enter amount: 600
+Discount 30.0
+Net payable: 570.0
+
+Enter amount: 1200
+Discount 120.0
+        Net payable: 1080.0</samp>
+    <h3>if...elif...else statement</h3>
+    <p>The elif statement allows you to check multiple expressions for TRUE and execute a block of code as soon as one of the conditions evaluates to TRUE. Similar to the else, the elif statement is optional. However, unlike else, for which there can be
+      at the most one statement, there can be an arbitrary number of elif statements following an if. For example</p>
+    <code>amount = int(input("Enter amount: "))
+
+if amount<1000:
+   discount = amount*0.05
+   print ("Discount",discount)
+elif amount<5000:
+   discount = amount*0.10
+   print ("Discount",discount)
+else:
+   discount = amount*0.15
+   print ("Discount",discount)
+    
+print ("Net payable:",amount-discount)</code>
+    <p>Produces the output</p>
+    <samp>Enter amount: 600
+Discount 30.0
+Net payable: 570.0
+
+Enter amount: 3000
+Discount 300.0
+Net payable: 2700.0
+
+Enter amount: 6000
+Discount 900.0
+        Net payable: 5100.0</samp>
+    <h3>Nested if statement</h3>
+    <p>There may be a situation when you want to check for another condition after a condition resolves to true. In such a situation, you can use the nested if construct. In a nested if construct, you can have an if...elif...else construct inside another
+      if...elif...else construct. For example</p>
+    <code>num = int(input("enter number"))
+if num%2 == 0:
+   if num%3 == 0:
+      print ("Divisible by 3 and 2")
+   else:
+      print ("divisible by 2 not divisible by 3")
+else:
+   if num%3 == 0:
+      print ("divisible by 3 not divisible by 2")
+   else:
+      print  ("not Divisible by 2 not divisible by 3")</code>
+    <p>Returns the output</p>
+    <samp>enter number8
+divisible by 2 not divisible by 3
+
+enter number15
+divisible by 3 not divisible by 2
+
+enter number12
+Divisible by 3 and 2
+
+enter number5
+      not Divisible by 2 not divisible by 3</samp>
+  </section>
+    <section class = "main-section" id = "Loops">
+      <header><h2>Loops</h2></header>
+      <p>A loop statement allows us to execute a statement or group of statements multiple times. Python  provides the following types of loops to handle looping requirements:</p>
+      <h3>while Loop</h3>
+      <p>A while loop statement in Python programming language repeatedly executes a target statement as long as a given condition is true. For example</p>
+      <code>count = 0
+while (count < 9):
+   print ('The count is:', count)
+   count = count + 1
+
+print ("Good bye!")</code>
+        <p>Produces the output</p>
+        <samp>The count is: 0
+The count is: 1
+The count is: 2
+The count is: 3
+The count is: 4
+The count is: 5
+The count is: 6
+The count is: 7
+The count is: 8
+Good bye!</samp>
+        <h3>for Loop</h3>
+        <p>The for statement in Python has the ability to iterate over the items of any sequence, such as a list or a string. If a sequence contains an expression list, it is evaluated first. Then, the first item in the sequence is assigned to the iterating variable. Next, the statement block is executed. Each item in the list is assigned to the iterating variable, and the block is executed until the entire sequence is exhausted. For example</p>
+        <code>for var in list(range(5)):
+          print (var)</code>
+        <p>Produces the output</p>
+        <samp>0
+1
+2
+3
+4</samp>
+        <h3>Nested loops</h3>
+        <p>Python programming language allows the usage of one loop inside another loop. For example</p>
+        <code>import sys
+for i in range(1,11):
+   for j in range(1,11):
+      k=i*j
+      print (k, end=' ')
+   print()</code>
+        <p>Produces the output</p>
+        <samp>1 2 3 4 5 6 7 8 9 10 
+2 4 6 8 10 12 14 16 18 20 
+3 6 9 12 15 18 21 24 27 30 
+4 8 12 16 20 24 28 32 36 40 
+5 10 15 20 25 30 35 40 45 50 
+6 12 18 24 30 36 42 48 54 60 
+7 14 21 28 35 42 49 56 63 70 
+8 16 24 32 40 48 56 64 72 80 
+9 18 27 36 45 54 63 72 81 90 
+10 20 30 40 50 60 70 80 90 100</samp>
+        </section>
+      <section class="main-section" id="Loop_Control_Statements">
+        <header><h2>Loop Control Statements</h2></header>
+        <p>Loop control statements change the execution from its normal sequence. When the execution leaves a scope, all automatic objects that were created in that scope are destroyed. Python supports the following control statements:</p>
+        <ul type = "disk">
+          <li>break</li>
+          <li>continue</li>
+          <li>pass</li>
+        </ul>
+        <p>For example</p>
+        <code>for letter in 'Python':     # First Example
+   if letter == 'h':
+      break
+   print ('Current Letter :', letter)
+  
+var = 10                    # Second Example
+while var > 0:              
+   print ('Current variable value :', var)
+   var = var -1
+   if var == 5:
+      break
+
+ print ("Good bye!")</code>
+        <p>Returns the output</p>
+        <samp>Current Letter : P
+Current Letter : y
+Current Letter : t
+Current variable value : 10
+Current variable value : 9
+Current variable value : 8
+Current variable value : 7
+Current variable value : 6
+Good bye!</samp>
+    </section>
+  <section class="main-section" id="Reference">
+    <header>
+      <h2>Reference</h2>
+    </header>
+    <p>All content for this challenge was taken from <a href="https://www.tutorialspoint.com/python3" target="_blank">this page</a>. I do not own or intend to use commercially the content taken from the aforementioned site. All ownership of these information
+      belong to them, and I intend to use it for only this challenge.</p>
+  </section>
+</main>
+    <div class = "footer"><center>Webpage developed by <a href="https://www.freecodecamp.com/haraesh0711" target="_blank">me</a>!</center></div>
+  
+  
+
+</body>
+
+</html>

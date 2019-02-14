@@ -1,0 +1,96 @@
+// Coded exclusively in React (Ho-whee!)
+// Component to handle header of application
+// Constant containing markdown text
+const placeHolder = 
+`# This is a big heading!
+
+## This is a smaller heading.
+
+#### This is how you include inline code.
+\`print("Hello world!")\`
+
+#### This is the Python function code for adding two numbers. (Nifty IMO, non?)
+\`\`\`python
+def swapValues(a,b):
+  return a+b
+\`\`\`
+
+#### LIST of places I want to visit before I die:
+\- Tashirojima
+\- The ruins of Carthage
+\- Kyoto
+
+#### One of my favorite QUOTES in a BLOCK:
+
+> "The future belongs to those who know where they belong"- Jeanine Matthews, Divergent.
+
+#### And this is the Westerosi House I support!
+
+![alt text](https://awoiaf.westeros.org/thumb.php?f=House_Tyrell.PNG&width=150)
+
+#### This is how you include a link.
+[All Wikipedia Ends In Philosophy, Literally](https://www.huffingtonpost.in/entry/wikipedia-philosophy_n_1093460?ec_carp=6734476314041031076)
+
+**Und das ist alles. Au revoir!**
+`;
+class AppHeader extends React.Component {
+  render() {
+    return (
+      <center><h1>Markdown Previewer</h1></center>
+    );
+  }
+}
+// Component to handle Markdown editor
+class MarkEditor extends React.Component {
+  render() {
+    return (
+      <div id = "editor"><h3>Markdown Editor</h3><br/><textarea rows = "20" cols = "80" onChange = {this.props.onChange} value = {this.props.editorText}></textarea></div>
+    );
+  }
+}
+// Component to handle Markdown previewer
+class MarkPreview extends React.Component {
+  render() {
+    return (
+      // The magic line
+     <div id = "preview"><h3>Markdown Previewer</h3><br/><div className = "preview" dangerouslySetInnerHTML = {{__html: marked(this.props.previewText)}}></div></div>
+    );
+  }
+}
+// Component to handle footer
+class AppFooter extends React.Component {
+  render() {
+    return(
+      <div><center>Designed and coded by <a href="https://www.freecodecamp.com/haraesh0711" target="_blank">me</a>! Background color because it's <a href = "http://mentalfloss.com/article/566498/2019-pantone-color-of-the-year-living-coral" target = "_blank">2019.</a> Gott Nytt År!</center></div>
+    );
+  }
+}
+// "Wrapper" component to join all components // of application
+class AppWrapper extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        markDownText: placeHolder
+      };
+      this.handleChange = this.handleChange.bind(this);
+    }
+    handleChange(event) {
+     this.setState({
+       markDownText: event.target.value
+     }); 
+    }
+    render() {
+    return(
+      <div>
+        <AppHeader /><br/><br/>
+        <MarkEditor initText = {this.state.markDownText} onChange = {this.handleChange} editorText = {this.state.markDownText}/><br/><br/>
+        <MarkPreview previewText = {this.state.markDownText}/><br/><br/>
+        <AppFooter />
+      </div>
+    );
+  }
+}
+// Render AppWrapper component in root <div>
+React.render(
+  <AppWrapper />,
+  document.getElementById('root'));

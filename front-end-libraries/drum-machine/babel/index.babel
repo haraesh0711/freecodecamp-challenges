@@ -1,0 +1,177 @@
+/* FUTURE:
+  1) Make separate DrumKey component and create DrumPad by mapping DrumKey to drumKeys object
+*/
+// Object containing information for DrumKey component
+// Component to create drum header
+class DrumHeader extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div id = "drum-header">
+        <center>
+          <h1>Drum Machine (freeCodeCamp)</h1>
+        </center>
+      </div>
+    );
+  }
+}
+// Component to create display
+class DrumDisplay extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return(
+        <div id = "display" className = "inverse-panel display-panel">Ba-dum-tssh!</div>
+    );
+  }
+}
+// Component to create drum key
+class DrumKey extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleAudioClick = this.handleAudioClick.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+  // componentDidMount and componentWillUnmount used to load and unload keyPress events to and from DOM
+  componentWillMount() {
+    document.addEventListener("keydown", this.handleKeyPress.bind(this));
+  }
+  // Play audio with ID corresponding to its parent div
+  handleAudioClick(id) {
+    const audio_id = id + '-play';
+    // Magic line
+    document.getElementById(audio_id).currentTime = 0;
+    document.getElementById(audio_id).play();
+    document.getElementById("display").innerHTML = this.props.padId
+  }
+  // Handle keyPress event
+  handleKeyPress(event) {
+   if(event.keyCode === this.props.keyCode) {
+      // Magic line
+    this.handleAudioClick(this.props.padKey);
+    }
+  } 
+  render() {
+    return (
+        <button id = {this.props.padId} className = "col btn drum-pad" onClick = {this.handleAudioClick.bind(this, this.props.padKey)}>{this.props.padKey}
+        <audio src = {this.props.audioFile} className = "clip" id = {this.props.audiopadKey}></audio>
+        </button>
+    );
+  }
+}
+// Component to create drum pad
+class DrumPad extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // Contains information for pad keys
+      drumKeys: [{
+  padId: "heater_6",
+  padKey: "Q",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3",
+  audiopadKey: "Q-play",
+  keyCode: 81
+},{
+  padId: "dsc_oh",
+  padKey: "W",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
+  audiopadKey: "W-play",
+  keyCode: 87
+},{
+  padId: "kick_n_hat",
+  padKey: "E",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
+  audiopadKey: "E-play",
+  keyCode: 69
+},{
+  padId: "cev_h2",
+  padKey: "A",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
+  audiopadKey: "A-play",
+  keyCode: 65
+},{
+  padId: "dry_ohh",
+  padKey: "S",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3",
+  audiopadKey: "S-play",
+  keyCode: 83
+},{
+  padId: "bld_h1",
+  padKey: "D",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3",
+  audiopadKey: "D-play",
+  keyCode: 68
+},{
+  padId: "punchy_kick_1",
+  padKey: "Z",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3",
+  audiopadKey: "Z-play",
+  keyCode: 90
+},{
+  padId: "side_stick_1",
+  padKey: "X",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3",
+  audiopadKey: "X-play",
+  keyCode: 88
+},{
+  padId: "brk_snr",
+  padKey: "C",
+  audioFile: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3",
+  audiopadKey: "C-play",
+  keyCode: 67
+}]
+    };
+  }
+  render() {
+    const drumPad = this.state.drumKeys.map((drumKey) => {
+      return (
+        <div className = "col drum-pad"><DrumKey padId = {drumKey.padId} padKey = {drumKey.padKey} audioFile = {drumKey.audioFile} audiopadKey = {drumKey.audiopadKey} keyCode = {drumKey.keyCode}/><br/></div>
+      );
+    });
+    return (
+      <div className = "inverse-pad">
+        <div className = "row">
+          {drumPad}
+        </div>
+      </div>
+    );
+  }
+}
+class DrumFooter extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        Created by <a href = "https://www.freecodecamp.org/haraesh0711" target = "_blank">moi</a>.
+      </div>
+    )
+  }
+}
+// Wrapper component containing all other components
+class AppWrapper extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return(
+      <div>
+        <center>
+          <DrumHeader />
+          <div className = "panel">
+            <DrumDisplay />
+            <DrumPad />
+          </div>
+          <DrumFooter />
+        </center>
+      </div>
+    );
+  }
+}
+React.render(
+  <AppWrapper />,
+  document.getElementById("drum-machine"));

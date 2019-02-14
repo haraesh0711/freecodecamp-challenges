@@ -1,0 +1,62 @@
+body {
+  text-align: center;
+}
+.quotebox {
+  font-family: 'Josefin Sans', cursive;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px 50px 50px 50px;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+}
+
+.qbtn {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  font-family: 'Josefin Sans', cursive;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 10px 10px 10px 10px;
+}
+
+.whitefont {
+  color: white !important;
+  font-family: 'Josefin Sans', cursive;
+}
+
+.bottom-spacer {
+  margin-bottom: 50px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b8bbbc;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.footer {
+  margin: 0;
+  padding: 10px;
+}

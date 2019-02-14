@@ -1,0 +1,30 @@
+a:link {
+  color: #c6c5ff;
+  text-decoration: none;
+}
+a:visited {
+  color: #c6c5ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #eae12f;
+  text-decoration: none;
+}
+a:active {
+  color: #c6c5ff;
+  text-decoration: none;
+}
+
+body {
+  margin: 15px 15px 15px 15px !important;
+  background-color: #421477 !important;
+  font-family: Dancing Script !important;
+  line-height: 25px !important;
+}
+.headingcolor {
+  color: #eae12e;
+}
+.infocolor {
+  color: #c6c5a9;
+  font-size: 20px;
+}
