@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - JavaScript Calculator (freeCodeCamp)</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body onload = "initialize()">
+  <center>
+    <div class = "header">
+      <h1>JavaScript Calculator</h1>
+    </div>
+    <div class = "container-fluid calc calculator-body">
+      <div id = "display-expr" class = "inverse-calc calculator-expr"></div>
+      <div id = "display" class = "inverse-calc calculator-display"></div>
+      <div class = "row">
+        <div class = "col inverse-calc calculator-button" id = "clear" onClick = "handleMaster(this.id)">CLR</div>
+        <div class = "col inverse-calc calculator-button" id = "equals" onClick = "handleMaster(this.id)">=</div>
+      </div>
+      <div class = "row">
+        <div class = "col inverse-calc calculator-button" id = "zero" onClick = "handleMaster(this.id)">0</div>
+        <div class = "col inverse-calc calculator-button" id = "decimal" onClick = "handleMaster(this.id)">.</div>
+        <div class = "col inverse-calc calculator-button" id = "sign" onClick = "handleMaster(this.id)">+/-</div>
+        <div class = "col inverse-calc calculator-button" id = "divide" onClick = "handleMaster(this.id)">/</div>
+      </div>
+      <div class = "row">
+        <div class = "col inverse-calc calculator-button" id = "one" onClick = "handleMaster(this.id)">1</div>
+        <div class = "col inverse-calc calculator-button" id = "two" onClick = "handleMaster(this.id)">2</div>
+        <div class = "col inverse-calc calculator-button" id = "three" onClick = "handleMaster(this.id)">3</div>
+        <div class = "col inverse-calc calculator-button" id = "multiply" onClick = "handleMaster(this.id)">*</div>
+      </div>
+      <div class = "row">
+        <div class = "col inverse-calc calculator-button" id = "four" onClick = "handleMaster(this.id)">4</div>
+        <div class = "col inverse-calc calculator-button" id = "five" onClick = "handleMaster(this.id)">5</div>
+        <div class = "col inverse-calc calculator-button" id = "six" onClick = "handleMaster(this.id)">6</div>
+        <div class = "col inverse-calc calculator-button" id = "subtract" onClick = "handleMaster(this.id)">-</div>
+      </div>
+      <div class = "row">
+        <div class = "col inverse-calc calculator-button" id = "seven" onClick = "handleMaster(this.id)">7</div>
+        <div class = "col inverse-calc calculator-button" id = "eight" onClick = "handleMaster(this.id)">8</div>
+        <div class = "col inverse-calc calculator-button" id = "nine" onClick = "handleMaster(this.id)">9</div>
+        <div class = "col inverse-calc calculator-button" onClick = "handleMaster(this.id)" id = "add">+</div>
+      </div>
+    </div>
+    <div class = "footer">
+      Developed by <a href = "https://www.freecodecamp.org/haraesh0711" target = "_blank">moi</a>.
+    </div>
+  </center>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

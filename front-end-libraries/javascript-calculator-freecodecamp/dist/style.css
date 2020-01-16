@@ -1,0 +1,59 @@
+body {
+  margin: 20px;
+  background-color: #1e90ff;
+  color: white;
+  font-family: "Source Code Pro";
+}
+.calc {
+  background-color: white;
+  color: #1e90ff;
+}
+.inverse-calc {
+  background-color: #1e90ff;
+  color: white;
+}
+.calculator-body {
+  width: 400px;
+  margin: 20px;
+  padding: 10px;
+}
+.calculator-expr {
+  margin: 15px 15px 0px 15px;
+  padding: 5px;
+  font-size: 15px;
+  text-align: right;
+}
+.calculator-display {
+  margin: 0px 15px 15px 15px;
+  padding: 10px;
+  font-size: 25px;
+  text-align: right;
+}
+.row {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.calculator-button {
+  margin: 10px;
+  padding: 10px;
+}
+.calculator-button:hover {
+  cursor: pointer;
+  background-color: #87ceeb
+}
+.footer a:active {
+  color: white;
+  text-decoration: none;
+}
+.footer a:visited {
+  color: white;
+  text-decoration: none;
+}
+.footer a:link {
+  color: white;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: silver;
+  text-decoration: none;
+}
